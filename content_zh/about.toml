@@ -3,9 +3,9 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "计算物理",
-  "数学原理",
-  "定理证明"
+  "焊接缺陷多模态无损检测技术",
+  "制造缺陷智能识别与质量预测",
+  "激光增材制造工艺调控"
 ]
 
 [[sections]]
@@ -21,8 +21,8 @@ title = "精选论文"
 filter = "selected"
 limit = 5
 
-[[sections]]
-id = "news"
-type = "list"
-title = "动态"
-source = "news.toml"
+# [[sections]]
+# id = "news"
+# type = "list"
+# title = "动态"
+# source = "news.toml"

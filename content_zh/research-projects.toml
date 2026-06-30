@@ -1,0 +1,31 @@
+type = "card"
+title = "科研项目"
+# description = "参与或主持的代表性科研项目。"
+
+# 每新增一个项目，复制以下区块并删除每行开头的 #。
+[[items]]
+title = "再制造机床服役性能演变机理探究”"
+subtitle = "重庆工商大学研究生“创新型科研项目” · 主持"
+date = "2024 - 至今"
+content = "简要说明项目目标、研究内容及个人贡献。"
+tags = ["被评为市级项目", "项目负责人"]
+# image = "/projects/example.jpg"
+# image_alt = "项目相关图片说明"
+
+[[items]]
+title = "磁光红外双成像不均衡特征数据融合谱聚类焊接缺陷检测新方法"
+subtitle = "国家自然科学基金面上项目 · 主研"
+date = "2024 - 至今"
+content = "主要负责：磁光红外双模态成像焊接缺陷检测与识别方法研究。"
+tags = ["国家自然科学基金面上项目", "主研"]
+# image = "/projects/example.jpg"
+# image_alt = "项目相关图片说明"
+
+[[items]]
+title = "“战略性国际科技创新合作重点专项”：新能源汽车齿轮绿色精密加工关键技术与成套装备研制"
+subtitle = "国家重点研发计划 · 主研"
+date = "2024 - 至今"
+content = "主要负责齿轮表面改性工艺研究"
+tags = ["国家重点研发计划", "主研"]
+# image = "/projects/example.jpg"
+# image_alt = "项目相关图片说明"

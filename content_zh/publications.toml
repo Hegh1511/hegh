@@ -1,4 +1,29 @@
-type = "publication"
-title = "论文"
-description = "我的研究成果列表。"
+type = "academic"
+title = "「求知·治学」"
+# description = "记录学术论文、国际/国内会议、科研项目与学术兼职。"
+
+[[sections]]
+id = "papers"
+label = "学术论文"
+kind = "publication"
 source = "publications.bib"
+title = "学术论文"
+description = "累计发表学术期刊论文15篇，其中以第一作者或导师第一/本人第二发表SCI/EI学术论文9篇，待发表1篇。"
+
+[[sections]]
+id = "conferences"
+label = "国际/国内会议"
+kind = "card"
+source = "conferences.toml"
+
+[[sections]]
+id = "research-projects"
+label = "科研项目"
+kind = "card"
+source = "research-projects.toml"
+
+[[sections]]
+id = "academic-service"
+label = "学术兼职"
+kind = "card"
+source = "academic-services.toml"

@@ -1,27 +1,134 @@
 type = "card"
-title = "奖项"
-description = "我获得的荣誉与奖项。"
+layout = "award"
+title = "荣誉奖项"
 
-[[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
+[[groups]]
+title = "博士阶段"
+description = "博士阶段获“博士研究生国家奖学金”及“贺云波-阿达智能奖学金二等奖”；连续两年获得广东工业大学博士研究生“二等学业奖学金”；成功入选并顺利结题“广东工业大学研究生拔尖创新型人才培育计划”。"
+
+[[groups.items]]
+title = "博士研究生国家奖学金"
+subtitle = "中华人民共和国教育部"
+date = "2025年度"
+image = "/papers/example.png"
+image_alt = "博士奖项证书"
+
+[[groups.items]]
+title = "广东工业大学研究生拔尖创新型人才培育计划"
+subtitle = "广东工业大学"
+date = "2025年度"
+image = "/papers/example.png"
+image_alt = "博士奖项证书"
+
+[[groups.items]]
+title = "博士研究生二等学业奖学金"
+subtitle = "广东工业大学"
+date = "2024-2025年度"
+image = "/papers/example.png"
+image_alt = "博士奖项证书"
+
+[[groups.items]]
+title = "博士研究生二等学业奖学金"
+subtitle = "广东工业大学"
+date = "2023-2024年度"
+image = "/papers/example.png"
+image_alt = "博士奖项证书"
+
+[[groups.items]]
+title = "贺云波-阿达智能奖学金-二等奖"
+subtitle = "广东工业大学机电工程学院"
 date = "2025"
-content = "奖项说明。"
+image = "/papers/example.png"
+image_alt = "博士奖项证书"
 
-[[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
-date = "2024"
-content = "奖项说明。"
+[[groups]]
+title = "硕士阶段"
+description = "硕士阶段连续三年获得校级研究生学业奖学金（含一等奖学金2次及二等奖学金1次），并荣获“优秀研究生干部”、“优秀研究生”及“优秀毕业研究生”等多项荣誉称号。"
 
-[[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
-date = "2023"
-content = "奖项说明。"
+[[groups.items]]
+title = "优秀研究生干部"
+subtitle = "重庆工商大学"
+date = "2021年"
+image = "/papers/example.png"
+image_alt = "硕士奖项证书"
 
-[[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
-date = "2022"
-content = "奖项说明。"
+[[groups.items]]
+title = "优秀毕业研究生"
+subtitle = "重庆工商大学"
+date = "2023年"
+image = "/papers/example.png"
+image_alt = "硕士奖项证书"
+
+[[groups.items]]
+title = "新生奖学金一等奖"
+subtitle = "重庆工商大学"
+date = "2020年"
+image = "/papers/example.png"
+image_alt = "硕士奖项证书"
+
+[[groups.items]]
+title = "学业奖学金一等奖"
+subtitle = "重庆工商大学"
+date = "2020-2021年度"
+image = "/papers/example.png"
+image_alt = "硕士奖项证书"
+
+[[groups.items]]
+title = "学业奖学金二等奖"
+subtitle = "重庆工商大学"
+date = "2020-2021年度"
+image = "/papers/example.png"
+image_alt = "硕士奖项证书"
+
+[[groups.items]]
+title = "优秀硕士毕业论文"
+subtitle = "重庆工商大学"
+date = "2023年"
+image = "/papers/example.png"
+image_alt = "硕士奖学金证书"
+
+[[groups]]
+title = "本科阶段"
+description = "本科阶段累计荣获2次国家励志奖学金及多次校级综合奖学金（含一等奖1次、二等奖2次），并2次获得科技创新奖学金；在全国大学生工程训练综合能力竞赛、机械创新设计大赛及先进成图技术与产品信息建模创新大赛中分别荣获省级一、二、二等奖。"
+
+[[groups.items]]
+title = "国家励志奖学金"
+subtitle = "重庆市教育委员会"
+date = "2016-2017年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"
+
+[[groups.items]]
+title = "国家励志奖学金"
+subtitle = "重庆市教育委员会"
+date = "2017-2018年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"
+
+[[groups.items]]
+title = "自强不息、立志成才先进个人"
+subtitle = "重庆工商大学"
+date = "2015-2016年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"
+
+[[groups.items]]
+title = "科技创新奖学金"
+subtitle = "重庆工商大学"
+date = "2016-2017年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"
+
+[[groups.items]]
+title = "优秀学生综合二等奖学金"
+subtitle = "重庆工商大学"
+date = "2016-2017年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"
+
+[[groups.items]]
+title = "科技学术创新活动先进个人"
+subtitle = "共青团重庆工商大学委员会"
+date = "2016-2017年度"
+image = "/papers/example.png"
+image_alt = "本科奖项证书"

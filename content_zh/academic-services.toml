@@ -1,0 +1,12 @@
+type = "card"
+title = "学术兼职"
+# description = "担任Journal of intelligent manufacturing、Scientific Reports、Discover Applied Sciences等多家国际期刊审稿专家。"
+empty_message = "担任Journal of intelligent manufacturing、Scientific Reports、Discover Applied Sciences等多家国际期刊审稿专家。"
+
+# 每新增一项兼职，复制以下区块并删除每行开头的 #。
+[[items]]
+title = "担任Journal of intelligent manufacturing、Scientific Reports、Discover Applied Sciences等多家国际期刊审稿专家。"
+
+
+# [[items]]
+# title = "Journal of intelligent manufacturing"

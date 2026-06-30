@@ -1,0 +1,14 @@
+type = "card"
+title = "Teaching Experience"
+description = "From August 2019 to September 2020, I worked as a practical training instructor at the Engineering Training Center, School of Mechanical Engineering, Chongqing Technology and Business University."
+
+[[items]]
+title = "Practical Training Courses"
+content = "I served as a practical training instructor at the Engineering Training Center, teaching manufacturing-process courses including 3D printing, CNC wire-cut EDM, and CNC lathe operation. This experience gave me a deep understanding of the complete path from drawing to physical part: students need to learn not only which buttons to press on a control panel, but also how to think about manufacturing processes - when to use additive manufacturing such as 3D printing, when to use subtractive manufacturing such as turning or wire cutting, and how to select an appropriate process based on material properties and accuracy requirements. The classroom experience also shaped my engineering habits. When I later led the development of custom equipment, I kept asking myself: \"If the operator were a beginner, would this interaction logic be intuitive enough?\""
+tags = ["3D Printing", "Wire-Cut EDM", "CNC Lathe"]
+
+[[items]]
+title = "Competition Manufacturing Instructor"
+content = "I served as a manufacturing instructor for the National Undergraduate Engineering Training Integration Ability Competition and the Mechanical Innovation Design Competition. I provided end-to-end guidance covering process planning for all mechanical parts in the student entries, CNC programming and machining, assembly coordination, and on-site commissioning. This included reviewing design drawings for manufacturability (DFM); selecting suitable processes such as 3D printing, CNC milling, and wire cutting; helping students convert 3D models into G-code; optimizing toolpaths and setting cutting parameters during machine operation; and performing interference checks, tolerance-fit adjustments, and functional debugging during assembly. The student teams I guided won provincial-level or higher awards in multiple competitions."
+tags = ["CNC Lathe", "Wire-Cut EDM", "Machining Center", "Benchwork"]
+image = "/program/竞赛指导.jpg"

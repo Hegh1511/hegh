@@ -15,12 +15,61 @@ import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
+import { withBasePath } from '@/lib/assetPath';
 import FormattedBibTeXText from './FormattedBibTeXText';
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
     publications: Publication[];
     embedded?: boolean;
+}
+
+function getAuthorPriority(publication: Publication): number {
+    const highlightedAuthorIndex = publication.authors.findIndex(author => author.isHighlighted);
+
+    if (highlightedAuthorIndex === 0) return 0;
+    if (highlightedAuthorIndex === 1) return 1;
+    return 2;
+}
+
+function getCasQuartilePriority(publication: Publication): number {
+    const quartile = publication.casQuartile?.match(/[1-4]/)?.[0];
+    return quartile ? Number(quartile) : 5;
+}
+
+function getMonthPriority(month?: string): number {
+    if (!month) return 0;
+
+    const parsedMonth = Number.parseInt(month, 10);
+    if (!Number.isNaN(parsedMonth)) return parsedMonth;
+
+    const monthOrder: Record<string, number> = {
+        jan: 1,
+        feb: 2,
+        mar: 3,
+        apr: 4,
+        may: 5,
+        jun: 6,
+        jul: 7,
+        aug: 8,
+        sep: 9,
+        oct: 10,
+        nov: 11,
+        dec: 12,
+    };
+
+    return monthOrder[month.toLowerCase().slice(0, 3)] || 0;
+}
+
+function comparePublications(a: Publication, b: Publication): number {
+    const authorPriority = getAuthorPriority(a) - getAuthorPriority(b);
+    if (authorPriority !== 0) return authorPriority;
+
+    const casPriority = getCasQuartilePriority(a) - getCasQuartilePriority(b);
+    if (casPriority !== 0) return casPriority;
+
+    if (b.year !== a.year) return b.year - a.year;
+    return getMonthPriority(b.month) - getMonthPriority(a.month);
 }
 
 export default function PublicationsList({ config, publications, embedded = false }: PublicationsListProps) {
@@ -56,7 +105,7 @@ export default function PublicationsList({ config, publications, embedded = fals
             const matchesType = selectedType === 'all' || pub.type === selectedType;
 
             return matchesSearch && matchesYear && matchesType;
-        });
+        }).sort(comparePublications);
     }, [publications, searchQuery, selectedYear, selectedType]);
 
     return (
@@ -68,7 +117,7 @@ export default function PublicationsList({ config, publications, embedded = fals
             <div className="mb-8">
                 <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
                 {config.description && (
-                    <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl`}>
+                    <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-4xl`}>
                         {config.description}
                     </p>
                 )}
@@ -204,7 +253,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                     <div className="w-full md:w-48 flex-shrink-0">
                                         <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                                             <Image
-                                                src={`/papers/${pub.preview}`}
+                                                src={withBasePath(`/papers/${pub.preview}`)}
                                                 alt={pub.title}
                                                 fill
                                                 className="object-cover"
@@ -230,8 +279,18 @@ export default function PublicationsList({ config, publications, embedded = fals
                                             </span>
                                         ))}
                                     </p>
-                                    <p className="text-sm font-medium text-neutral-800 dark:text-neutral-600 mb-3">
-                                        {pub.journal || pub.conference} {pub.year}
+                                    <p className="mb-3 flex flex-wrap items-center gap-2 text-sm font-medium text-neutral-800 dark:text-neutral-300">
+                                        <span>{pub.journal || pub.conference} {pub.year}</span>
+                                        {pub.casQuartile && (
+                                            <span className="inline-flex items-center rounded-md border border-amber-200 bg-amber-50 px-2 py-0.5 text-xs font-semibold text-amber-700 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+                                                {pub.casQuartile}
+                                            </span>
+                                        )}
+                                        {pub.jcrQuartile && (
+                                            <span className="inline-flex items-center rounded-md border border-sky-200 bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-300">
+                                                {pub.jcrQuartile}
+                                            </span>
+                                        )}
                                     </p>
 
                                     {pub.description && (

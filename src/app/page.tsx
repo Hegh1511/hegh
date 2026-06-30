@@ -1,9 +1,17 @@
 import { getConfig } from '@/lib/config';
 import { getMarkdownContent, getBibtexContent, getTomlContent, getPageConfig } from '@/lib/content';
 import { parseBibTeX } from '@/lib/bibtexParser';
+import { loadAcademicSections } from '@/lib/academicPage';
 import HomePageClient, { type HomePageLocaleData } from '@/components/home/HomePageClient';
 import { Publication } from '@/types/publication';
-import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig } from '@/types/page';
+import {
+  AcademicPageConfig,
+  AcademicSectionData,
+  BasePageConfig,
+  PublicationPageConfig,
+  TextPageConfig,
+  CardPageConfig,
+} from '@/types/page';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
 
 interface SectionConfig {
@@ -27,7 +35,8 @@ type PageData =
   | { type: 'about'; id: string; sections: SectionConfig[] }
   | { type: 'publication'; id: string; config: PublicationPageConfig; publications: Publication[] }
   | { type: 'text'; id: string; config: TextPageConfig; content: string }
-  | { type: 'card'; id: string; config: CardPageConfig };
+  | { type: 'card'; id: string; config: CardPageConfig }
+  | { type: 'academic'; id: string; config: AcademicPageConfig; sections: AcademicSectionData[] };
 
 function processSections(sections: SectionConfig[], locale?: string): SectionConfig[] {
   return sections.map((section: SectionConfig) => {
@@ -79,11 +88,21 @@ function loadPageDataForLocale(locale: string | undefined): HomePageLocaleData {
 
         const pageConfig = rawConfig as BasePageConfig;
 
-        if (pageConfig.type === 'about' || 'sections' in (rawConfig as object)) {
+        if (pageConfig.type === 'about') {
           return {
             type: 'about',
             id: item.target,
             sections: processSections((rawConfig as { sections: SectionConfig[] }).sections || [], locale),
+          } as PageData;
+        }
+
+        if (pageConfig.type === 'academic') {
+          const academicConfig = pageConfig as AcademicPageConfig;
+          return {
+            type: 'academic',
+            id: item.target,
+            config: academicConfig,
+            sections: loadAcademicSections(academicConfig, locale),
           } as PageData;
         }
 

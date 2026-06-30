@@ -1,4 +1,29 @@
-type = "publication"
-title = "Publications"
-description = "A collection of my research work."
+type = "academic"
+title = "Knowledge & Scholarship"
+# description = "Publications, conferences, research projects, and academic service."
+
+[[sections]]
+id = "papers"
+label = "Publications"
+kind = "publication"
 source = "publications.bib"
+title = "Publications"
+description = "I have published 15 journal papers, including nine SCI/EI-indexed papers as first author or as second author with my supervisor as first author, with one additional paper pending publication."
+
+[[sections]]
+id = "conferences"
+label = "International/Domestic Conferences"
+kind = "card"
+source = "conferences.toml"
+
+[[sections]]
+id = "research-projects"
+label = "Research Projects"
+kind = "card"
+source = "research-projects.toml"
+
+[[sections]]
+id = "academic-service"
+label = "Academic Service"
+kind = "card"
+source = "academic-services.toml"

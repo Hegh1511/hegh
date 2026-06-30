@@ -1,10 +1,15 @@
-type = "card"
-title = "教学"
-description = "我曾参与授课或助教的课程。"
+type = "academic"
+title = "「躬行·授业」"
+description = "教学经历与项目经历。"
 
-[[items]]
-title = "示例课程"
-subtitle = "助教"
-date = "2024"
-content = "课程内容与职责简介。"
-tags = ["本科生", "计算机"]
+[[sections]]
+id = "teaching-experience"
+label = "教学经历"
+kind = "card"
+source = "teaching-experience.toml"
+
+[[sections]]
+id = "course-projects"
+label = "项目经历"
+kind = "card"
+source = "course-projects.toml"

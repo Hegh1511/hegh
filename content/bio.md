@@ -1,5 +1,3 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am currently a PhD student in the School of Electromechanical Engineering at Guangdong University of Technology, supervised by Prof. Xiangdong Gao.
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+I have published nine SCI/EI-indexed papers and participated in research projects funded by the National Natural Science Foundation of China and the National Key Research and Development Program of China. My experience includes experimental design, data analysis, academic writing, and engineering development. I have received honors including the National Scholarship for Doctoral Students.

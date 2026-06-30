@@ -1,9 +1,11 @@
-import { notFound } from 'next/navigation';
+﻿import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
-import { getConfig } from '@/lib/config';
+import { getConfig, type SiteConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
+import { loadAcademicSections } from '@/lib/academicPage';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
 import {
+  AcademicPageConfig,
   BasePageConfig,
   PublicationPageConfig,
   TextPageConfig,
@@ -44,6 +46,15 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     return {
       type: 'card',
       config: pageConfig as CardPageConfig,
+    };
+  }
+
+  if (pageConfig.type === 'academic') {
+    const academicConfig = pageConfig as AcademicPageConfig;
+    return {
+      type: 'academic',
+      config: academicConfig,
+      sections: loadAcademicSections(academicConfig, locale),
     };
   }
 
@@ -98,5 +109,29 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  return <DynamicPageClient dataByLocale={dataByLocale} defaultLocale={runtimeI18n.defaultLocale} />;
+  const sidebarByLocale: Record<string, {
+    author: SiteConfig['author'];
+    social: SiteConfig['social'];
+    features: SiteConfig['features'];
+    researchInterests?: string[];
+  }> = {};
+
+  for (const locale of targetLocales) {
+    const localeConfig = getConfig(locale);
+    const aboutConfig = getPageConfig<{ profile?: { research_interests?: string[] } }>('about', locale);
+    sidebarByLocale[locale] = {
+      author: localeConfig.author,
+      social: localeConfig.social,
+      features: localeConfig.features,
+      researchInterests: aboutConfig?.profile?.research_interests,
+    };
+  }
+
+  return (
+    <DynamicPageClient
+      dataByLocale={dataByLocale}
+      defaultLocale={runtimeI18n.defaultLocale}
+      sidebarByLocale={sidebarByLocale}
+    />
+  );
 }

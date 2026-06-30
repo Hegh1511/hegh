@@ -81,6 +81,8 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       // Optional fields
       journal: cleanBibTeXString(tags.journal),
       conference: cleanBibTeXString(tags.booktitle),
+      casQuartile: cleanBibTeXString(tags.casquartile || tags.casQuartile || tags.cas),
+      jcrQuartile: cleanBibTeXString(tags.jcrquartile || tags.jcrQuartile || tags.jcr),
       volume: tags.volume,
       issue: tags.number,
       pages: tags.pages,
@@ -93,7 +95,17 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       preview,
 
       // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code']),
+      bibtex: reconstructBibTeX(entry, [
+        'selected',
+        'preview',
+        'description',
+        'keywords',
+        'code',
+        'casquartile',
+        'jcrquartile',
+        'cas',
+        'jcr',
+      ]),
     };
 
     // Clean up undefined fields

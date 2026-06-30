@@ -1,10 +1,15 @@
-type = "card"
-title = "Teaching"
-description = "Courses I have taught or assisted with."
+type = "academic"
+title = "Practice & Teaching"
+description = "Teaching and project experience."
 
-[[items]]
-title = "Example Course"
-subtitle = "Teaching Assistant"
-date = "2024"
-content = "Description of the course and responsibilities. Content of this course can be found [here](https://example.com)."
-tags = ["Undergraduate", "CS"]
+[[sections]]
+id = "teaching-experience"
+label = "Teaching Experience"
+kind = "card"
+source = "teaching-experience.toml"
+
+[[sections]]
+id = "course-projects"
+label = "Project Experience"
+kind = "card"
+source = "course-projects.toml"

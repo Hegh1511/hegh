@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { LocaleProvider } from '@/components/ui/LocaleProvider';
 import { getConfig } from '@/lib/config';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
+import { withBasePath } from '@/lib/assetPath';
 import type { SiteConfig } from '@/lib/config';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: config.author.name,
     publisher: config.author.name,
     icons: {
-      icon: config.site.favicon,
+      icon: withBasePath(config.site.favicon),
     },
     openGraph: {
       type: 'website',
@@ -131,7 +132,7 @@ export default function RootLayout({
   return (
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
+        <link rel="icon" href={withBasePath(config.site.favicon)} type="image/svg+xml" />
         <link rel="dns-prefetch" href="https://jialeliu.com" />
         <link rel="preconnect" href="https://jialeliu.com" crossOrigin="" />
         <link

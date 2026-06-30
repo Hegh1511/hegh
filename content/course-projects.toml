@@ -1,0 +1,38 @@
+type = "card"
+title = "Project Experience"
+description = "As a core researcher in my doctoral research group, I built an OCT-based real-time laser-welding penetration monitoring system and developed online monitoring software with multiple functional modules. I also collaborated with an external organization to develop a foot-and-ankle training-injury early-warning system and a heart-rate monitoring system, both successfully completed. Previously, as a project manager at Chongqing Bomai Technology Co., Ltd., I designed and developed hot-riveting, hot-plate, and ultrasonic-welding equipment for multiple automotive exterior plastic parts, covering the complete development process from mechanical-structure design and motion control to process optimization."
+
+[[items]]
+title = "OCT-Based Weld Penetration Measurement System"
+subtitle = "Guangdong University of Technology · Core Researcher"
+content = "Built an OCT-based real-time laser-welding penetration monitoring system and developed online monitoring software integrating data acquisition, signal processing, result visualization, and related functional modules."
+image = "/program/OCT.jpg"
+image_alt = "OCT-based weld penetration measurement system"
+
+[[items]]
+title = "Development of Foot-and-Ankle Training-Injury Early-Warning and Heart-Rate Monitoring Systems"
+subtitle = "Industry-Sponsored Project · Project Leader"
+content = "Led the collaborative development of a foot-and-ankle training-injury early-warning system and a heart-rate monitoring system, covering sensing, data acquisition, warning logic, software integration, and system validation. The project was completed and accepted."
+image = "/program/魔术贴方案.png"
+image_alt = "System development solution"
+
+[[items]]
+title = "Design of a Welding Fixture for Plastic Latch Features on an Automotive Trunk Component"
+subtitle = "Chongqing Bomai Technology Co., Ltd. · Project Leader"
+content = "To meet the customer's requirements for the welding accuracy and strength of plastic latch features on a trunk component, I led the design and manufacture of a dedicated hot-plate welding fixture. The PLC-based system integrated motion control, closed-loop temperature control, and production counting. Independent temperature-control channels precisely melted each latch, while a dual-cylinder-driven forming fixture applied stable heat and pressure to ensure welding strength and consistency. A safety light curtain and dual-start buttons provided two-layer operational protection. The completed fixture achieved accurate positioning and stable welding, significantly improved process integration, and received strong customer recognition."
+image = "/program/尾箱覆盖件卡口焊接方案.png"
+image_alt = "Trunk-component latch welding solution"
+
+[[items]]
+title = "Retrofit Design of an Ultrasonic Welding Fixture for an Automotive Cup Holder"
+subtitle = "Chongqing Bomai Technology Co., Ltd. · Project Leader"
+content = "For the ultrasonic-welding requirements of a vehicle cup-holder assembly, I upgraded an existing ultrasonic-welding machine for automated operation. A contour-matching fixture was designed around the irregular profiles of the cup holder and its accessories to provide accurate initial positioning, while an Airtac rotary clamping cylinder supplied stable holding force and prevented movement during welding. A cylindrical-pin transition-positioning scheme enabled rapid fixture changes and high-accuracy alignment with the ultrasonic horn. I then recalibrated the welding stroke and trigger position and matched the machine sequence, enabling fully automatic ultrasonic welding. The upgraded equipment operated reliably, produced consistent welding paths, and reduced the customer's equipment procurement cost."
+image = "/program/杯托超声波焊接方案.jpg"
+image_alt = "Cup-holder ultrasonic-welding solution"
+
+[[items]]
+title = "Hook-and-Loop Tape Cutting Machine"
+subtitle = "Chongqing Bomai Technology Co., Ltd. · Project Leader"
+content = "To address shared-machine use and inconvenient length and cutting-depth adjustment for self-adhesive hook-and-loop tape, I led the design and manufacture of an intelligent cutting machine. At the feeding stage, a PLC coordinated a stepper motor and pneumatic cylinder: precise control of the motor angle delivered tape at a specified length, while the cylinder performed the cut with accurately matched feeding and cutting timing. An adjustable cylinder stroke and quick-change blade mechanism independently controlled the cutting depth of the loop and hook layers and supported rapid adaptation to products of different thicknesses. A concise interface with quick parameter recall supported frequent operator and specification changes on the production line, significantly improving cutting efficiency and consistency."
+image = "/program/魔术贴方案.png"
+image_alt = "Hook-and-loop tape cutting solution"
