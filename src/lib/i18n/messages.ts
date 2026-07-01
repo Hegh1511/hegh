@@ -15,6 +15,7 @@ export interface LocaleMessages {
   };
   profile: {
     email: string;
+    phone: string;
     location: string;
     workAddress: string;
     click: string;
@@ -41,6 +42,7 @@ export interface LocaleMessages {
     abstract: string;
     bibtex: string;
     code: string;
+    casTop: string;
   };
   footer: {
     lastUpdated: string;
@@ -65,6 +67,7 @@ const en: LocaleMessages = {
   },
   profile: {
     email: 'Email',
+    phone: 'Phone',
     location: 'Location',
     workAddress: 'Work Address',
     click: 'Click',
@@ -91,6 +94,7 @@ const en: LocaleMessages = {
     abstract: 'Abstract',
     bibtex: 'BibTeX',
     code: 'Code',
+    casTop: 'CAS Top',
   },
   footer: {
     lastUpdated: 'Last updated',
@@ -115,6 +119,7 @@ const zh: LocaleMessages = {
   },
   profile: {
     email: '邮箱',
+    phone: '联系方式',
     location: '地址',
     workAddress: '办公地址',
     click: '点击',
@@ -141,6 +146,7 @@ const zh: LocaleMessages = {
     abstract: '摘要',
     bibtex: 'BibTeX',
     code: '代码',
+    casTop: '中科院TOP',
   },
   footer: {
     lastUpdated: '最近更新',

@@ -1,5 +1,4 @@
-﻿'use client';
-import React from 'react';
+'use client';
 
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
@@ -26,7 +25,7 @@ export default function TextPage({ config, content, embedded = false }: TextPage
                     {config.description}
                 </p>
             )}
-            <div className="text-neutral-700 dark:text-neutral-600 leading-relaxed text-justify">
+            <div className="text-page-content text-neutral-700 dark:text-neutral-600 leading-relaxed text-justify">
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
@@ -52,51 +51,6 @@ export default function TextPage({ config, content, embedded = false }: TextPage
                         ),
                         strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
                         em: ({ children }) => <em className="italic text-neutral-600 dark:text-neutral-500">{children}</em>,
-
-                        table: ({ children }) => (
-                            <table className="w-full table-fixed">
-                                {children}
-                            </table>
-                        ),
-                        th: ({ children }) => (
-                            <th className="px-1 py-1.5 text-left font-semibold text-primary align-top w-1/3 whitespace-nowrap">
-                                {children}
-                            </th>
-                        ),
-                        td: ({ children }) => {
-                            const items = React.Children.toArray(children);
-
-                            for (let index = 0; index < items.length; index++) {
-                                const child = items[index];
-                                if (!React.isValidElement<{ children?: React.ReactNode }>(child)) {
-                                    continue;
-                                }
-
-                                const labelText = React.Children.toArray(child.props.children).join('');
-                                const isChineseLabel = /[\u3400-\u9fff]/.test(labelText);
-                                if (!labelText || !isChineseLabel) {
-                                    continue;
-                                }
-
-                                return (
-                                    <td className="break-words px-1 py-1.5 align-top text-neutral-700 dark:text-neutral-400">
-                                        {items.slice(0, index)}
-                                        <strong className="mr-0.5 inline-flex w-[4em] justify-between font-semibold text-primary">
-                                            {Array.from(labelText).map((character, characterIndex) => (
-                                                <span key={`${character}-${characterIndex}`}>{character}</span>
-                                            ))}
-                                        </strong>
-                                        {items.slice(index + 1)}
-                                    </td>
-                                );
-                            }
-
-                            return (
-                                <td className="break-words px-1 py-1.5 align-top text-neutral-700 dark:text-neutral-400">
-                                    {children}
-                                </td>
-                            );
-                        },
                     }}
                 >
                     {content}

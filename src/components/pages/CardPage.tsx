@@ -129,17 +129,17 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         </div>
                     )}
 
-                    <div className="min-w-0 flex-1">
+                    <div className="grid min-w-0 flex-1 grid-cols-[minmax(0,1fr)] items-start gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-4">
                         <h3 className={`${embedded ? "text-base" : "text-lg"} font-semibold text-primary leading-snug`}>
                             {item.title}
                         </h3>
                         {item.subtitle && (
-                            <p className={`${embedded ? "text-xs" : "text-sm"} mt-1 text-accent font-medium leading-snug`}>
+                            <p className={`${embedded ? "text-xs" : "text-sm"} text-accent font-medium leading-snug sm:col-start-1`}>
                                 {item.subtitle}
                             </p>
                         )}
                         {item.content && (
-                            <div className={`${embedded ? "text-xs" : "text-sm"} mt-2 text-neutral-600 dark:text-neutral-500 leading-relaxed`}>
+                            <div className={`${embedded ? "text-xs" : "text-sm"} text-neutral-600 dark:text-neutral-500 leading-relaxed sm:col-span-2`}>
                                 <ReactMarkdown components={markdownComponents}>
                                     {item.content}
                                 </ReactMarkdown>

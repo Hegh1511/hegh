@@ -59,6 +59,8 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale, sidebar
               social={sidebarProfile.social}
               features={sidebarProfile.features}
               researchInterests={sidebarProfile.researchInterests}
+              showResearchInterests={true}
+              showLikes={false}
             />
           </div>
           <div className="lg:col-span-3">

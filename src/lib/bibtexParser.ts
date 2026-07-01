@@ -59,6 +59,10 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
 
     // Parse selected field (convert string to boolean)
     const selected = tags.selected === 'true' || tags.selected === 'yes';
+    const casTopValue = tags.castop || tags.casTop || tags.cas_top || tags.istop || tags.isTop;
+    const casTop = casTopValue
+      ? ['true', 'yes', '1', '是', 'top'].includes(String(casTopValue).toLowerCase())
+      : undefined;
 
     // Parse preview field (remove braces if present)
     const preview = tags.preview?.replace(/[{}]/g, '');
@@ -89,8 +93,10 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       doi: tags.doi,
       url: tags.url,
       code: tags.code,
+      pdfUrl: cleanBibTeXString(tags.pdf || tags.pdfurl || tags.pdfUrl),
       abstract: cleanBibTeXString(tags.abstract),
       description: cleanBibTeXString(tags.description || tags.note),
+      casTop,
       selected,
       preview,
 
@@ -101,8 +107,13 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
         'description',
         'keywords',
         'code',
+        'pdf',
+        'pdfurl',
         'casquartile',
         'jcrquartile',
+        'castop',
+        'cas_top',
+        'istop',
         'cas',
         'jcr',
       ]),

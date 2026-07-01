@@ -13,8 +13,8 @@ image_alt = "OCT-based weld penetration measurement system"
 title = "Development of Foot-and-Ankle Training-Injury Early-Warning and Heart-Rate Monitoring Systems"
 subtitle = "Industry-Sponsored Project · Project Leader"
 content = "Led the collaborative development of a foot-and-ankle training-injury early-warning system and a heart-rate monitoring system, covering sensing, data acquisition, warning logic, software integration, and system validation. The project was completed and accepted."
-image = "/program/魔术贴方案.png"
-image_alt = "System development solution"
+# image = "/program/魔术贴方案.png"
+# image_alt = "System development solution"
 
 [[items]]
 title = "Design of a Welding Fixture for Plastic Latch Features on an Automotive Trunk Component"
@@ -27,7 +27,7 @@ image_alt = "Trunk-component latch welding solution"
 title = "Retrofit Design of an Ultrasonic Welding Fixture for an Automotive Cup Holder"
 subtitle = "Chongqing Bomai Technology Co., Ltd. · Project Leader"
 content = "For the ultrasonic-welding requirements of a vehicle cup-holder assembly, I upgraded an existing ultrasonic-welding machine for automated operation. A contour-matching fixture was designed around the irregular profiles of the cup holder and its accessories to provide accurate initial positioning, while an Airtac rotary clamping cylinder supplied stable holding force and prevented movement during welding. A cylindrical-pin transition-positioning scheme enabled rapid fixture changes and high-accuracy alignment with the ultrasonic horn. I then recalibrated the welding stroke and trigger position and matched the machine sequence, enabling fully automatic ultrasonic welding. The upgraded equipment operated reliably, produced consistent welding paths, and reduced the customer's equipment procurement cost."
-image = "/program/杯托超声波焊接方案.jpg"
+image = "/program/杯托超声波焊接方案.bmp"
 image_alt = "Cup-holder ultrasonic-welding solution"
 
 [[items]]

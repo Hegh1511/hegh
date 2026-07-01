@@ -5,22 +5,18 @@ title = "Research Projects"
 [[items]]
 title = "Investigation of the Evolution Mechanism of In-Service Performance of Remanufactured Machine Tools"
 subtitle = "Graduate Innovative Research Project, Chongqing Technology and Business University · Principal Investigator"
-date = "2024 - Present"
-content = "A brief description of the project objectives, research activities, and personal contributions."
 tags = ["Recognized as a Municipal-Level Project", "Principal Investigator"]
-# image = "/projects/example.jpg"
-# image_alt = "Project-related image"
+image = "/Master/研究生项目.png"
+image_alt = "Graduate innovative research project"
 
 [[items]]
 title = "A New Spectral-Clustering Method for Welding-Defect Detection through Imbalanced Feature-Data Fusion from Magneto-Optical and Infrared Imaging"
 subtitle = "General Program of the National Natural Science Foundation of China · Core Researcher"
-date = "2024 - Present"
 content = "Main responsibility: research on welding-defect detection and recognition using magneto-optical and infrared bimodal imaging."
 tags = ["NSFC General Program", "Core Researcher"]
 
 [[items]]
 title = "Key Technologies and Complete Equipment for Green Precision Machining of New-Energy-Vehicle Gears"
 subtitle = "Strategic International Science and Technology Innovation Cooperation Key Project, National Key R&D Program of China · Core Researcher"
-date = "2024 - Present"
 content = "Main responsibility: research on gear-surface modification processes."
 tags = ["National Key R&D Program of China", "Core Researcher"]

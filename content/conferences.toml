@@ -1,5 +1,6 @@
 type = "card"
 title = "International/Domestic Conferences"
+layout = "award"
 # description = "International and domestic academic conferences attended."
 
 [[items]]
@@ -8,7 +9,7 @@ subtitle = "Chinese Mechanical Engineering Society · Oral Presentation in Engli
 date = "October 2025"
 content = "Delivered an academic presentation entitled \"Magneto-optical imaging non-destructive testing image fusion of welding defects under controlled rotating magnetic field excitation based on the BM3D-DLIA method\"."
 tags = ["International Conference", "Oral Presentation"]
-# image = "/projects/example.jpg"
+image = "/Doctor/IMCC会议.png"
 
 [[items]]
 title = "16th International Conference on Innovative Computing, Information and Control (ICICIC 2022)"
@@ -16,4 +17,3 @@ subtitle = "ICIC International · Oral Presentation in English"
 date = "September 2022"
 content = "Presented a poster entitled \"A multi-objective optimization of process parameters for laser cladding based on GA-ACO-BP and GNSGA-II\"."
 tags = ["International Conference", "Oral Presentation in English"]
-# image = "/projects/example.jpg"

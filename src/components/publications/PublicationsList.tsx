@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,7 +9,8 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon
+    DocumentTextIcon,
+    ArrowDownTrayIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
@@ -273,7 +274,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                     {author.name}
                                                 </span>
                                                 {author.isCorresponding && (
-                                                    <sup className={`ml-0 ${author.isHighlighted ? 'text-accent' : 'text-neutral-600 dark:text-neutral-400'}`}>†</sup>
+                                                    <sup className={`ml-0 ${author.isHighlighted ? 'text-accent' : 'text-neutral-600 dark:text-neutral-400'}`}>*</sup>
                                                 )}
                                                 {idx < pub.authors.length - 1 && ', '}
                                             </span>
@@ -291,15 +292,25 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 {pub.jcrQuartile}
                                             </span>
                                         )}
+                                        {pub.casTop && (
+                                            <span className="inline-flex items-center rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+                                                {messages.publications.casTop}
+                                            </span>
+                                        )}
                                     </p>
 
-                                    {pub.description && (
-                                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-4 line-clamp-3">
-                                            {pub.description}
-                                        </p>
-                                    )}
-
                                     <div className="flex flex-wrap gap-2 mt-auto">
+                                        {pub.pdfUrl && (
+                                            <a
+                                                href={withBasePath(pub.pdfUrl)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <ArrowDownTrayIcon className="h-3 w-3 mr-1.5" />
+                                                PDF
+                                            </a>
+                                        )}
                                         {pub.doi && (
                                             <a
                                                 href={`https://doi.org/${pub.doi}`}

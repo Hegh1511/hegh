@@ -1,18 +1,19 @@
 type = "card"
 title = "国际/国内会议"
+layout = "award"
 # description = "参与的国际及国内学术会议。"
 
 [[items]]
 title = "The 21st International Manufacturing Conference in China (IMCC 2025)"
-subtitle = "中国机械工程学会 · 全英文口头报告"
+subtitle = "中国机械工程学会 · 口头报告"
 date = "2025年10月"
 content = "发表题为\"Magneto-optical imaging non-destructive testing image fusion of welding defects under controlled rotating magnetic field excitation based on the BM3D-DLIA method\"的学术报告。"
-tags = ["国际会议", "口头报告"]
-# image = "/projects/example.jpg"
+tags = ["国际会议", "全英文口头报告"]
+image = "/Doctor/IMCC会议.png"
 
 [[items]]
 title = "16th International Conference on Innovative Computing, Information and Control (ICICIC 2022)"
-subtitle = "ICIC International学会 · 全英文口头汇报"
+subtitle = "ICIC International学会 · 口头汇报"
 date = "2022年9月"
 content = "发表题为\"A multi-objective optimization of process parameters for laser cladding based on GA-ACO-BP and GNSGA-Ⅱ\"的海报展示。"
 tags = ["国际会议", "全英文口头汇报"]

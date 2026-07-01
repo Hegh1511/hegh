@@ -116,15 +116,17 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
     researchInterests?: string[];
   }> = {};
 
-  for (const locale of targetLocales) {
-    const localeConfig = getConfig(locale);
-    const aboutConfig = getPageConfig<{ profile?: { research_interests?: string[] } }>('about', locale);
-    sidebarByLocale[locale] = {
-      author: localeConfig.author,
-      social: localeConfig.social,
-      features: localeConfig.features,
-      researchInterests: aboutConfig?.profile?.research_interests,
-    };
+  if (slug === 'cv') {
+    for (const locale of targetLocales) {
+      const localeConfig = getConfig(locale);
+      const aboutConfig = getPageConfig<{ profile?: { research_interests?: string[] } }>('about', locale);
+      sidebarByLocale[locale] = {
+        author: localeConfig.author,
+        social: localeConfig.social,
+        features: localeConfig.features,
+        researchInterests: aboutConfig?.profile?.research_interests,
+      };
+    }
   }
 
   return (

@@ -44,6 +44,7 @@ export interface Publication {
   impactFactor?: number;
   quartile?: 'Q1' | 'Q2' | 'Q3' | 'Q4';
   casQuartile?: string;
+  casTop?: boolean;
   jcrQuartile?: string;
   bibtex?: string;
   venue?: string;

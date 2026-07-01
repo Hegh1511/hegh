@@ -11,6 +11,9 @@ institution = "Guangdong University of Technology"
 avatar = "/bio.jpg"
 
 [social]
+email = "hegh1511@163.com"
+phone = "18723576304"
+google_scholar = "https://scholar.google.com.hk/citations?hl=zh-CN&user=bg8m4UcAAAAJ&view_op=list_works&gmla=AP6z3OZ3uND666QS8OGU9puOoFaca5Z-tkYc9Af_hroMYu00Gax-G96L4CT79pYCFXN5dO2rmtUNsSBZQdGJ6NLK8QvELcvHp1iEOUtM-q8"
 location = "Guangzhou, China"
 location_details = [
   "Guangdong University of Technology (Higher Education Mega Center Campus),",
@@ -18,7 +21,7 @@ location_details = [
 ]
 
 [features]
-enable_likes = true
+enable_likes = false
 enable_one_page_mode = false
 
 [i18n]

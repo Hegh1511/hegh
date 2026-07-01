@@ -1,134 +1,194 @@
 type = "card"
 layout = "award"
-title = "Awards"
+title = "Awards & Honors"
 
 [[groups]]
-title = "PhD"
-description = "During my doctoral studies, I received the National Scholarship for Doctoral Students and the Second Prize of the He Yunbo-ADA Intelligence Scholarship, earned the Second-Class Doctoral Academic Scholarship at Guangdong University of Technology for two consecutive years, and completed the university's Graduate Top Innovative Talent Cultivation Program."
+title = "Doctoral Stage"
+description = "During my doctoral studies, I received the National Scholarship for Doctoral Students and the Second Prize of the He Yunbo-ADA Intelligence Scholarship; received the Second-Class Doctoral Academic Scholarship at Guangdong University of Technology for two consecutive years; and was selected for and successfully completed the university's Graduate Top Innovative Talent Cultivation Program."
 
 [[groups.items]]
 title = "National Scholarship for Doctoral Students"
 subtitle = "Ministry of Education of the People's Republic of China"
 date = "2025"
-image = "/papers/example.png"
-image_alt = "Doctoral award certificate"
+image = "/Doctor/2025国家奖学金.png"
+image_alt = "2025 National Scholarship certificate"
 
 [[groups.items]]
 title = "Graduate Top Innovative Talent Cultivation Program"
 subtitle = "Guangdong University of Technology"
 date = "2025"
-image = "/papers/example.png"
-image_alt = "Doctoral award certificate"
+image = "/Doctor/入选拔尖创新.png"
+image_alt = "Graduate Top Innovative Talent Cultivation Program certificate"
 
 [[groups.items]]
 title = "Second-Class Doctoral Academic Scholarship"
 subtitle = "Guangdong University of Technology"
 date = "2024-2025"
-image = "/papers/example.png"
-image_alt = "Doctoral award certificate"
+image = "/Doctor/2024-2025二等学业奖学金.png"
+image_alt = "2024-2025 Second-Class Doctoral Academic Scholarship certificate"
 
 [[groups.items]]
 title = "Second-Class Doctoral Academic Scholarship"
 subtitle = "Guangdong University of Technology"
 date = "2023-2024"
-image = "/papers/example.png"
-image_alt = "Doctoral award certificate"
+image = "/Doctor/2023-2024二等学业奖学金.png"
+image_alt = "2023-2024 Second-Class Doctoral Academic Scholarship certificate"
 
 [[groups.items]]
 title = "He Yunbo-ADA Intelligence Scholarship, Second Prize"
 subtitle = "School of Electromechanical Engineering, Guangdong University of Technology"
 date = "2025"
-image = "/papers/example.png"
-image_alt = "Doctoral award certificate"
+image = "/Doctor/贺云波-阿达智能奖学金.png"
+image_alt = "He Yunbo-ADA Intelligence Scholarship certificate"
 
 [[groups]]
-title = "Master's"
-description = "During my master's studies, I received university graduate academic scholarships for three consecutive years (two first-class and one second-class), and was recognized as an Outstanding Graduate Student Leader, Outstanding Graduate Student, and Outstanding Graduate upon Graduation."
-
-[[groups.items]]
-title = "Outstanding Graduate Student Leader"
-subtitle = "Chongqing Technology and Business University"
-date = "2021"
-image = "/papers/example.png"
-image_alt = "Master's award certificate"
+title = "Master's Stage"
+description = "During my master's studies, I received university graduate academic scholarships for three consecutive years, including two first-class and one second-class awards, and received honors including Outstanding Graduate Student Leader, Outstanding Graduate Student, and Outstanding Graduate upon Graduation."
 
 [[groups.items]]
 title = "Outstanding Graduate upon Graduation"
 subtitle = "Chongqing Technology and Business University"
 date = "2023"
-image = "/papers/example.png"
-image_alt = "Master's award certificate"
+image = "/Master/优秀毕业研究生.png"
+image_alt = "Outstanding Graduate upon Graduation certificate"
+
+[[groups.items]]
+title = "Outstanding Graduate Student Leader"
+subtitle = "Chongqing Technology and Business University"
+date = "2021"
+image = "/Master/优秀研究生干部.png"
+image_alt = "Outstanding Graduate Student Leader certificate"
 
 [[groups.items]]
 title = "First-Class Entrance Scholarship"
 subtitle = "Chongqing Technology and Business University"
 date = "2020"
-image = "/papers/example.png"
-image_alt = "Master's scholarship certificate"
+image = "/Master/新生入学一等奖学金.png"
+image_alt = "First-Class Entrance Scholarship certificate"
 
 [[groups.items]]
 title = "First-Class Academic Scholarship"
 subtitle = "Chongqing Technology and Business University"
 date = "2020-2021"
-image = "/papers/example.png"
-image_alt = "Master's scholarship certificate"
+image = "/Master/2020-2021学业一等奖学金.png"
+image_alt = "2020-2021 First-Class Academic Scholarship certificate"
 
 [[groups.items]]
 title = "Second-Class Academic Scholarship"
 subtitle = "Chongqing Technology and Business University"
-date = "2020-2021"
-image = "/papers/example.png"
-image_alt = "Master's scholarship certificate"
+date = "2022-2023"
+image = "/Master/2023-2024学业二等奖学金.png"
+image_alt = "Second-Class Academic Scholarship certificate"
 
 [[groups.items]]
 title = "Outstanding Master's Thesis"
 subtitle = "Chongqing Technology and Business University"
 date = "2023"
-image = "/papers/example.png"
-image_alt = "Master's thesis award certificate"
+image = "/Master/优秀硕士学位论文.png"
+image_alt = "Outstanding Master's Thesis certificate"
 
 [[groups]]
-title = "Undergraduate"
-description = "During my undergraduate studies, I received the National Encouragement Scholarship twice, multiple university comprehensive scholarships (one first-class and two second-class), and the Science and Technology Innovation Scholarship twice. I also won provincial first, second, and second prizes, respectively, in the National Undergraduate Engineering Training Integration Ability Competition, Mechanical Innovation Design Competition, and Advanced Graphics Skills and Product Information Modeling Innovation Competition."
+title = "Undergraduate Stage"
+description = "During my undergraduate studies, I received the National Encouragement Scholarship twice and multiple university comprehensive scholarships, including one first-class and two second-class awards; received the Science and Technology Innovation Scholarship twice; and won provincial first, second, and second prizes in the National Undergraduate Engineering Training Integration Ability Competition, Mechanical Innovation Design Competition, and Advanced Graphics Skills and Product Information Modeling Innovation Competition."
 
 [[groups.items]]
 title = "National Encouragement Scholarship"
 subtitle = "Chongqing Municipal Education Commission"
 date = "2016-2017"
-image = "/papers/example.png"
-image_alt = "Undergraduate award certificate"
+image = "/Undergraduate/2016-2017国家励志奖学金.png"
+image_alt = "2016-2017 National Encouragement Scholarship certificate"
 
 [[groups.items]]
 title = "National Encouragement Scholarship"
 subtitle = "Chongqing Municipal Education Commission"
 date = "2017-2018"
-image = "/papers/example.png"
-image_alt = "Undergraduate award certificate"
-
-[[groups.items]]
-title = "Outstanding Individual for Self-Reliance and Aspiration"
-subtitle = "Chongqing Technology and Business University"
-date = "2015-2016"
-image = "/papers/example.png"
-image_alt = "Undergraduate award certificate"
-
-[[groups.items]]
-title = "Science and Technology Innovation Scholarship"
-subtitle = "Chongqing Technology and Business University"
-date = "2016-2017"
-image = "/papers/example.png"
-image_alt = "Undergraduate scholarship certificate"
+image = "/Undergraduate/2017-2018国家励志奖学金.png"
+image_alt = "2017-2018 National Encouragement Scholarship certificate"
 
 [[groups.items]]
 title = "Second-Class Comprehensive Scholarship for Outstanding Students"
 subtitle = "Chongqing Technology and Business University"
 date = "2016-2017"
-image = "/papers/example.png"
-image_alt = "Undergraduate scholarship certificate"
+image = "/Undergraduate/2016-2017学业二等奖学金.png"
+image_alt = "2016-2017 Second-Class Comprehensive Scholarship certificate"
 
 [[groups.items]]
-title = "Outstanding Individual in Scientific and Academic Innovation Activities"
+title = "Second-Class Comprehensive Scholarship for Outstanding Students"
+subtitle = "Chongqing Technology and Business University"
+date = "2017-2018"
+image = "/Undergraduate/2017-2018 二等奖学金.png"
+image_alt = "2017-2018 Second-Class Comprehensive Scholarship certificate"
+
+[[groups.items]]
+title = "First-Class Comprehensive Scholarship for Outstanding Students"
+subtitle = "Chongqing Technology and Business University"
+date = "2018-2019"
+image = "/Undergraduate/2018-2019学业一等奖学金.png"
+image_alt = "2018-2019 First-Class Comprehensive Scholarship certificate"
+
+[[groups.items]]
+title = "Science and Technology Innovation Scholarship"
+subtitle = "Chongqing Technology and Business University"
+date = "2016-2017"
+image = "/Undergraduate/2016-2017科技创新奖学金.png"
+image_alt = "2016-2017 Science and Technology Innovation Scholarship certificate"
+
+[[groups.items]]
+title = "Science and Technology Innovation Scholarship"
+subtitle = "Chongqing Technology and Business University"
+date = "2017-2018"
+image = "/Undergraduate/2017-2018科技创新奖学金.png"
+image_alt = "2017-2018 Science and Technology Innovation Scholarship certificate"
+
+[[groups.items]]
+title = "Single-Item Scholarship for Academic Excellence"
+subtitle = "Chongqing Technology and Business University"
+date = "2018-2019"
+image = "/Undergraduate/2018-2019单项奖学金.png"
+image_alt = "2018-2019 Single-Item Scholarship certificate"
+
+[[groups.items]]
+title = "University-Level Outstanding Undergraduate Thesis/Design"
+subtitle = "Chongqing Technology and Business University"
+date = "2019"
+image = "/Undergraduate/校级优秀本科毕业论文.png"
+image_alt = "Outstanding Undergraduate Thesis certificate"
+
+[[groups.items]]
+title = "Advanced Individual for Self-Reliance and Aspiration"
+subtitle = "Chongqing Technology and Business University"
+date = "2015-2016"
+image = "/Undergraduate/自强不息立志成才先进个人.png"
+image_alt = "Advanced Individual for Self-Reliance and Aspiration certificate"
+
+[[groups.items]]
+title = "Advanced Individual in Scientific and Academic Innovation Activities"
 subtitle = "Youth League Committee, Chongqing Technology and Business University"
 date = "2016-2017"
-image = "/papers/example.png"
-image_alt = "Undergraduate award certificate"
+image = "/Undergraduate/科技学术创新活动先进个人.png"
+image_alt = "Advanced Individual in Scientific and Academic Innovation Activities certificate"
+
+[[groups]]
+title = "Competition Awards"
+description = "I won provincial first, second, and second prizes in the National Undergraduate Engineering Training Integration Ability Competition, Mechanical Innovation Design Competition, and Advanced Graphics Skills and Product Information Modeling Innovation Competition."
+
+[[groups.items]]
+title = "Second Prize, 8th National Undergraduate Mechanical Innovation Design Competition"
+subtitle = "Chongqing Municipal Education Commission"
+date = "2018"
+image = "/Undergraduate/第八届全国大学生机械创新设计大赛.png"
+image_alt = "Mechanical Innovation Design Competition certificate"
+
+[[groups.items]]
+title = "First Prize, 6th National Undergraduate Engineering Training Integration Ability Competition"
+subtitle = "Chongqing Municipal Education Commission"
+date = "2018"
+image = "/Undergraduate/工程训练大赛一等奖.png"
+image_alt = "Engineering Training Competition certificate"
+
+[[groups.items]]
+title = "Advanced Graphics Skills and Product Information Modeling Innovation Competition for Universities in Central and Western China"
+subtitle = "Chongqing Engineering Graphics Society"
+date = "2017/2018"
+image = "/Undergraduate/成图大赛.png"
+image_alt = "Advanced Graphics Competition certificate"

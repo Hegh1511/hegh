@@ -184,6 +184,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.text-page-content table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.text-page-content th,
+.text-page-content td {
+  padding: 0.375rem 0.25rem;
+  vertical-align: top;
+}
+
+.text-page-content th {
+  width: 33.333333%;
+  white-space: nowrap;
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.text-page-content td {
+  overflow-wrap: break-word;
+}
+
 /* Typography utilities */
 .text-balance {
   text-wrap: balance;
