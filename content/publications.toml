@@ -8,11 +8,11 @@ label = "Publications"
 kind = "publication"
 source = "publications.bib"
 title = "Publications"
-description = "I have published 15 journal papers, including nine SCI/EI-indexed papers as first author or as second author with my supervisor as first author, with one additional paper pending publication."
+description = "I have published a total of 9 SCI/EI academic papers, either as the first author or with my advisor as the first author and myself as the second author."
 
 [[sections]]
 id = "conferences"
-label = "International/Domestic Conferences"
+label = "Conferences"
 kind = "card"
 source = "conferences.toml"
 

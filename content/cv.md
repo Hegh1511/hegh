@@ -5,7 +5,6 @@
 | **Date of Birth**: 1997.01.31 | **Gender**: Male |
 | **Place of Origin**: Liangping, Chongqing | **Political Status**: Probationary Member of the Communist Party of China |
 | **Institution**: Guangdong University of Technology | **Major**: Mechanical Engineering |
-| **Education Level**: Doctoral Student | **Degree**: Doctor of Engineering |
 | **Phone**: 18723576304 (also WeChat) | **Email**: hegh1511@163.com |
 
 ## Education

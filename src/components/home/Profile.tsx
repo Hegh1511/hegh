@@ -8,7 +8,10 @@ import {
     AcademicCapIcon,
     HeartIcon,
     MapPinIcon,
-    PhoneIcon
+    PhoneIcon,
+    ClipboardDocumentIcon,
+    CheckIcon,
+    ArrowTopRightOnSquareIcon
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
@@ -52,7 +55,9 @@ export default function Profile({
     const [showThanks, setShowThanks] = useState(false);
     const [showAddress, setShowAddress] = useState(false);
     const [isAddressPinned, setIsAddressPinned] = useState(false);
-    const [lastClickedTooltip, setLastClickedTooltip] = useState<'address' | null>(null);
+    const [activeContact, setActiveContact] = useState<string | null>(null);
+    const [copiedContact, setCopiedContact] = useState<string | null>(null);
+    const [lastClickedTooltip, setLastClickedTooltip] = useState<'address' | string | null>(null);
 
     // Check local storage for user's like status
     useEffect(() => {
@@ -78,15 +83,42 @@ export default function Profile({
         }
     };
 
+    const copyText = async (value: string) => {
+        if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(value);
+            return;
+        }
+
+        const textarea = document.createElement('textarea');
+        textarea.value = value;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    };
+
+    const handleCopy = async (key: string, value: string) => {
+        await copyText(value);
+        setCopiedContact(key);
+        window.setTimeout(() => setCopiedContact((current) => current === key ? null : current), 1600);
+    };
+
     const socialLinks = [
         ...(social.email ? [{
             name: messages.profile.email,
             href: `mailto:${social.email}`,
+            value: social.email,
+            actionLabel: messages.profile.sendEmail,
             icon: EnvelopeIcon,
         }] : []),
         ...(social.phone ? [{
             name: messages.profile.phone,
             href: `tel:${social.phone}`,
+            value: social.phone,
+            actionLabel: messages.profile.call,
             icon: PhoneIcon,
         }] : []),
         ...(social.location || social.location_details ? [{
@@ -98,21 +130,29 @@ export default function Profile({
         ...(social.google_scholar ? [{
             name: 'Google Scholar',
             href: social.google_scholar,
+            value: social.google_scholar,
+            actionLabel: messages.profile.open,
             icon: AcademicCapIcon,
         }] : []),
         ...(social.orcid ? [{
             name: 'ORCID',
             href: social.orcid,
+            value: social.orcid,
+            actionLabel: messages.profile.open,
             icon: OrcidIcon,
         }] : []),
         ...(social.github ? [{
             name: 'GitHub',
             href: social.github,
+            value: social.github,
+            actionLabel: messages.profile.open,
             icon: Github,
         }] : []),
         ...(social.linkedin ? [{
             name: 'LinkedIn',
             href: social.linkedin,
+            value: social.linkedin,
+            actionLabel: messages.profile.open,
             icon: Linkedin,
         }] : []),
     ];
@@ -230,17 +270,82 @@ export default function Profile({
                             </div>
                         );
                     }
+                    const contactKey = `${link.name}-${link.href}`;
+                    const isContactActive = activeContact === contactKey;
+                    const shouldOpenNewTab = !link.href.startsWith('tel:') && !link.href.startsWith('mailto:');
+
                     return (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            target={link.href.startsWith('tel:') ? undefined : '_blank'}
-                            rel={link.href.startsWith('tel:') ? undefined : 'noopener noreferrer'}
-                            className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
-                            aria-label={link.name}
+                        <div
+                            key={contactKey}
+                            className="relative"
+                            onMouseEnter={() => {
+                                setActiveContact(contactKey);
+                                setLastClickedTooltip(contactKey);
+                            }}
+                            onMouseLeave={() => setActiveContact((current) => current === contactKey ? null : current)}
                         >
-                            <IconComponent className="h-5 w-5" />
-                        </a>
+                            <a
+                                href={link.href}
+                                target={shouldOpenNewTab ? '_blank' : undefined}
+                                rel={shouldOpenNewTab ? 'noopener noreferrer' : undefined}
+                                className="block p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
+                                aria-label={link.name}
+                                onFocus={() => setActiveContact(contactKey)}
+                                onBlur={() => setActiveContact((current) => current === contactKey ? null : current)}
+                            >
+                                <IconComponent className="h-5 w-5" />
+                            </a>
+
+                            <AnimatePresence>
+                                {isContactActive && (
+                                    <motion.div
+                                        initial={{ opacity: 0, x: '-50%', y: 8, scale: 0.95 }}
+                                        animate={{ opacity: 1, x: '-50%', y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, x: '-50%', y: 8, scale: 0.95 }}
+                                        className={`absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-[calc(100vw-2rem)] rounded-lg bg-neutral-800 px-4 py-3 text-sm font-medium text-white shadow-lg ${lastClickedTooltip === contactKey ? 'z-20' : 'z-10'}`}
+                                        onMouseEnter={() => {
+                                            setActiveContact(contactKey);
+                                            setLastClickedTooltip(contactKey);
+                                        }}
+                                        onMouseLeave={() => setActiveContact((current) => current === contactKey ? null : current)}
+                                    >
+                                        <div className="mb-2 text-center font-semibold">{link.name}</div>
+                                        <div className="max-w-[18rem] break-all text-center text-xs text-neutral-200">
+                                            {link.value || link.href}
+                                        </div>
+                                        <div className="mt-3 flex justify-center gap-2">
+                                            <button
+                                                type="button"
+                                                onClick={(event) => {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                    handleCopy(contactKey, link.value || link.href);
+                                                }}
+                                                className="inline-flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 text-xs font-medium text-white transition-colors hover:bg-white/20"
+                                                aria-label={messages.common.copyToClipboard}
+                                            >
+                                                {copiedContact === contactKey ? (
+                                                    <CheckIcon className="h-3.5 w-3.5" />
+                                                ) : (
+                                                    <ClipboardDocumentIcon className="h-3.5 w-3.5" />
+                                                )}
+                                                <span>{copiedContact === contactKey ? messages.profile.copied : messages.profile.copy}</span>
+                                            </button>
+                                            <a
+                                                href={link.href}
+                                                target={shouldOpenNewTab ? '_blank' : undefined}
+                                                rel={shouldOpenNewTab ? 'noopener noreferrer' : undefined}
+                                                className="inline-flex items-center gap-1.5 rounded-md bg-accent px-2.5 py-1 text-xs font-medium text-white transition-colors hover:bg-accent-dark"
+                                            >
+                                                <ArrowTopRightOnSquareIcon className="h-3.5 w-3.5" />
+                                                <span>{link.actionLabel || messages.profile.open}</span>
+                                            </a>
+                                        </div>
+                                        <div className="absolute top-full left-1/2 h-0 w-0 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
                     );
                 })}
             </div>

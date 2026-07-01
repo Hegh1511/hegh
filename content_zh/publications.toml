@@ -8,7 +8,7 @@ label = "学术论文"
 kind = "publication"
 source = "publications.bib"
 title = "学术论文"
-description = "累计发表学术期刊论文15篇，其中以第一作者或导师第一/本人第二发表SCI/EI学术论文9篇，待发表1篇。"
+description = "累计以第一作者或导师第一/本人第二发表SCI/EI学术论文9篇。"
 
 [[sections]]
 id = "conferences"

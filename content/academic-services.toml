@@ -1,6 +1,7 @@
 type = "card"
 title = "Academic Service"
 # description = "Reviewer for several international journals."
+empty_message = "Reviewer for several international journals, including Journal of Intelligent Manufacturing, Scientific Reports, and Discover Applied Sciences."
 
 [[items]]
 title = "Reviewer for several international journals, including Journal of Intelligent Manufacturing, Scientific Reports, and Discover Applied Sciences."

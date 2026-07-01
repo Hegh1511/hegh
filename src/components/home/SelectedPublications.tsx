@@ -47,11 +47,24 @@ export default function SelectedPublications({ publications, title, enableOnePag
                         <h3 className="font-semibold text-primary mb-2 leading-tight">
                             <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
                         </h3>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-600 dark:text-neutral-500">
+                        <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-400">
                             <span>{pub.journal || pub.conference}</span>
                             <span>{pub.year}</span>
-                            {pub.casQuartile && <span>{pub.casQuartile}</span>}
-                            {pub.casTop && <span>{messages.publications.casTop}</span>}
+                            {pub.casQuartile && (
+                                <span className="inline-flex items-center rounded-md border border-amber-200 bg-amber-50 px-2 py-0.5 text-xs font-semibold text-amber-700 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+                                    {pub.casQuartile}
+                                </span>
+                            )}
+                            {pub.jcrQuartile && (
+                                <span className="inline-flex items-center rounded-md border border-sky-200 bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-300">
+                                    {pub.jcrQuartile}
+                                </span>
+                            )}
+                            {pub.casTop && (
+                                <span className="inline-flex items-center rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+                                    {messages.publications.casTop}
+                                </span>
+                            )}
                         </div>
                         <div className="mt-3 flex flex-wrap gap-2">
                             {pub.pdfUrl && (
